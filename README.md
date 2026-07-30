@@ -23,8 +23,68 @@ Testing the webserver.
 # PROGRAM:
 ```
 from http.server import HTTPServer,BaseHTTPRequestHandler
-content='''<html>
-<h1>Hello Everyone!!</h1>
+content='''
+<html>
+<head>
+    <title>My Laptop Specifications</title>
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+        table th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: green ;
+            color: white;
+        }
+        h2
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Laptop Specifications</h2>
+
+    <table>
+        <tr>
+            <th>Specification</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Brand</td>
+            <td>Acer</td>
+        </tr>
+        <tr>
+            <td>Processor</td>
+            <td>Intel Core Ultra 5</td>
+        </tr>
+        <tr>
+            <td>Graphics</td>
+            <td>Intel Integrated Graphics</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>16 GB</td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>512 GB SSD</td>
+        </tr>
+        <tr>
+            <td>Operating System</td>
+            <td>Windows 11</td>
+        </tr>
+    </table>
+
+</body>
 </html>'''
 class Myserver(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -40,8 +100,7 @@ httpd.serve_forever()
 ```
 
 # OUTPUT:
-![alt text](<Screenshot 2026-07-28 133748.png>)
-![alt text](<Screenshot 2026-07-28 133822.png>)
-
+![alt text](<Screenshot 2026-07-30 140815.png>)
+![alt text](<Screenshot 2026-07-30 140843.png>)
 # RESULT:
 The program for implementing simple webserver is executed successfully.
